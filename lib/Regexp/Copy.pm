@@ -14,7 +14,7 @@ require AutoLoader;
 
 @EXPORT = qw( );
 @EXPORT_OK = qw(re_copy);
-$VERSION = '0.05';
+$VERSION = '0.06';
 
 
 bootstrap Regexp::Copy $VERSION;

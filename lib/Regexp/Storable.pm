@@ -1,6 +1,6 @@
 package Regexp::Storable;
 
-our $VERSION = '0.04';
+our $VERSION = '0.06';
 
 package Regexp;
 
