@@ -12,8 +12,7 @@ sub STORABLE_freeze {
 
 sub STORABLE_thaw {
   my ( $original, $cloning, $thaw ) = @_;
-  return unless $thaw;
-  my $final = qr/$thaw/;
+  my $final = ($thaw) ? qr/$thaw/ : qr//;
   Regexp::Copy::re_copy($final, $original);
 }
 
