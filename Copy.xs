@@ -27,7 +27,8 @@ CODE:
     othersv = (SV*) SvRV(newre);
     mg      = _find_mg(othersv);
 
-    if (mg) {    
+    if (mg) {
+      mg_free( sv );
       /* really, please, be magical, goan, do it.... */
       SvRMAGICAL_on(sv);
       /* copy the magic in mg to sv */

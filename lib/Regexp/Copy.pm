@@ -14,7 +14,7 @@ require AutoLoader;
 
 @EXPORT = qw( );
 @EXPORT_OK = qw(re_copy);
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 
 bootstrap Regexp::Copy $VERSION;
@@ -58,7 +58,8 @@ allows you to change the Regexp by copying one object created through qr// to an
 
 This module came about through discussions on the London.pm mailing list in regards to
 attempts various people had made to serialize objects with qr// created Regexp objects in
-them.  
+them.  The Regex::Copy distribution also loads Regexp::Storable, which provides hooks to
+allow the Storable persistence method to freeze and thaw Regexp objects created by qr//.
 
 =head1 FUNCTIONS
 
